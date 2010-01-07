@@ -11,12 +11,17 @@ inc/Module/Install/Metadata.pm
 inc/Module/Install/Win32.pm
 inc/Module/Install/WriteAll.pm
 lib/Aspect/Library/Profiler.pm
+lib/Aspect/Library/Profiler/Cleanup.pm
 LICENSE
 Makefile.PL
 MANIFEST			This list of files
 META.yml
 README
 t/01_compile.t
+t/02_global.t
+t/03_lexical.t
 t/97_meta.t
 t/98_pod.t
 t/99_pmv.t
+t/global.pl
+t/lexical.pl
