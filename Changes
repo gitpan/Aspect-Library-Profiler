@@ -1,5 +1,9 @@
 Changes for Perl extension Aspect-Library-Profiler
 
+0.98 Tue 24 May 2011 - Adam Kennedy
+	- Updated to Module::Install 1.01
+	- Updated to match syntax changes in Aspect 0.98
+
 0.33 Fri  8 Jan 2010 - Adam Kennedy
 	- Spaces to tabs in the Changes file
 	- Moving from before () + after () to an around () implementation

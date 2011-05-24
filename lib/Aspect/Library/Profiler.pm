@@ -3,12 +3,13 @@ package Aspect::Library::Profiler;
 use 5.008002;
 use strict;
 use warnings;
-use Aspect::Modular    0.32 ();
 use Benchmark::Timer 0.7101 ();
+use Aspect::Modular    0.98 ();
+use Aspect::Advice::Around  ();
 
 use vars qw{$VERSION @ISA};
 BEGIN {
-	$VERSION = '0.33';
+	$VERSION = '0.98';
 	@ISA     = 'Aspect::Modular';
 }
 
@@ -23,9 +24,9 @@ sub get_advice {
 		lexical  => $_[0]->lexical,
 		pointcut => $_[1],
 		code     => sub {
-			my $name = $_[0]->sub_name;
+			my $name = $_->sub_name;
 			$TIMER->start($name);
-			$_[0]->run_original;
+			$_->proceed;
 			$TIMER->stop($name);
 		},
 	);
@@ -122,7 +123,7 @@ Ran Eilam E<lt>eilara@cpan.orgE<gt>
 
 Copyright 2001 by Marcel GrE<uuml>nauer.
 
-Some parts copyright 2009 - 2010 Adam Kennedy.
+Some parts copyright 2009 - 2011 Adam Kennedy.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
