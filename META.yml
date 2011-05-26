@@ -25,11 +25,11 @@ no_index:
     - t
     - xt
 requires:
-  Aspect::Modular: 0.98
+  Aspect::Modular: 1.00
   Benchmark::Timer: 0.7101
   perl: 5.8.2
 resources:
   ChangeLog: http://fisheye2.atlassian.com/changelog/cpan/trunk/Aspect-Library-Profiler
   license: http://dev.perl.org/licenses/
   repository: http://svn.ali.as/cpan/trunk/Aspect-Library-Profiler
-version: 0.98
+version: 1.00
